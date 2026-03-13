@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>マーケットプレイス</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- ===== Sidebar ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__top">
+        <button class="icon-btn" id="sidebarToggle" aria-label="サイドバー切替">☰</button>
+        <a class="logo" href="index.html" aria-label="RoboX ホーム">
+          ROBOCROSS<span class="accent">🤖</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="メインメニュー">
+        <ul>
+          <li class="nav__section">メイン</li>
+          <li><a class="nav__link is-active" href="index.html">マーケットプレイス</a></li>
+          <li><a class="nav__link" href="dashboard.html">ダッシュボード</a></li>
+          <li><a class="nav__link" href="#">アプリケーション</a></li>
+          <li><a class="nav__link" href="#">コンテンツ</a></li>
+          <li><a class="nav__link" href="#">コンテナ</a></li>
+          <li><a class="nav__link" href="#">パッケージ</a></li>
+
+          <li class="nav__section">デバイス</li>
+          <li><a class="nav__link" href="#">デバイスグループ</a></li>
+          <li><a class="nav__link" href="#">デバイス</a></li>
+          <li><a class="nav__link" href="#">ログ / アラート</a></li>
+          <li><a class="nav__link" href="#">統計</a></li>
+
+          <li class="nav__section">アカウント</li>
+          <li><a class="nav__link" href="#">設定</a></li>
+          <li><a class="nav__link" href="#">ヘルプ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ===== Content ===== -->
+    <div class="content">
+      <header class="topbar">
+        <nav class="breadcrumbs">
+          <a href="#">製品</a> <span class="sep">/</span>
+          <span aria-current="page">マーケットプレイス</span>
+        </nav>
+        <div class="topbar__actions">
+          <input id="searchInput" class="search" type="search" placeholder="アプリを検索…" />
+          <button id="themeToggle" class="icon-btn" title="ダーク/ライト切替">🌓</button>
+          <div class="avatar">SM</div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="title-row">
+          <h1>マーケットプレイス</h1>
+          <a class="see-all" href="#">すべて</a>
+        </div>
+        <section id="appGrid" class="card-grid" aria-live="polite"></section>
+      </main>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
