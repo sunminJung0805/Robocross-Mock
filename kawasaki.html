@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>カワサキ ソフトウェア | マーケットプレイス</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- ===== Sidebar（マーケットプレイスをアクティブに） ===== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__top">
+        <button class="icon-btn" id="sidebarToggle" aria-label="サイドバー切替">☰</button>
+        <a class="logo" href="index.html">ROBOCROSS<span class="accent">🤖</span></a>
+      </div>
+      <nav class="nav" aria-label="メインメニュー">
+        <ul>
+          <li class="nav__section">メイン</li>
+          <li><a class="nav__link is-active" href="index.html">マーケットプレイス</a></li>
+          <li><a class="nav__link" href="dashboard.html">ダッシュボード</a></li>
+          <li><a class="nav__link" href="#">アプリケーション</a></li>
+          <li><a class="nav__link" href="#">コンテンツ</a></li>
+          <li><a class="nav__link" href="#">コンテナ</a></li>
+          <li><a class="nav__link" href="#">パッケージ</a></li>
+
+          <li class="nav__section">デバイス</li>
+          <li><a class="nav__link" href="#">デバイスグループ</a></li>
+          <li><a class="nav__link" href="#">デバイス</a></li>
+          <li><a class="nav__link" href="#">ログ / アラート</a></li>
+          <li><a class="nav__link" href="#">統計</a></li>
+
+          <li class="nav__section">アカウント</li>
+          <li><a class="nav__link" href="#">設定</a></li>
+          <li><a class="nav__link" href="#">ヘルプ</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ===== Content ===== -->
+    <div class="content">
+      <!-- Top bar -->
+      <header class="topbar">
+        <nav class="breadcrumbs" aria-label="パンくず">
+          <a href="index.html">製品</a>
+          <span class="sep">/</span>
+          <a href="index.html">マーケットプレイス</a>
+          <span class="sep">/</span>
+          <span aria-current="page">カワサキ ソフトウェア</span>
+        </nav>
+        <div class="topbar__actions">
+          <!--button id="themeToggle" class="icon-btn" title="ダーク/ライト切替">🌓</button-->
+          <div class="avatar">SM</div>
+        </div>
+      </header>
+
+      <main class="main">
+        <!-- ツールバー（件数・並び替え） -->
+        <div class="catalog__toolbar">
+          <div><span id="itemRange">1–12</span> / <span id="itemTotal">84</span> 項目</div>
+          <label class="catalog__sort">並べ替え：
+            <select id="sortSelect">
+              <option value="standard">Standard</option>
+              <option value="name-asc">名前 A→Z</option>
+              <option value="name-desc">名前 Z→A</option>
+            </select>
+          </label>
+        </div>
+
+        <!-- カタログ 3カラム：左フィルタ / 中央グリッド / 右プロモ -->
+        <section class="catalog">
+          <!-- 左：カテゴリ（モック） -->
+          <aside class="catalog__aside" aria-label="カテゴリ">
+            <h3 class="catalog__aside-title">カテゴリー</h3>
+            <details open>
+              <summary>アプリケーションソフトウェア (84)</summary>
+              <ul class="facet-list">
+                <li><label><input type="checkbox" checked> アーク溶接 (30)</label></li>
+                <li><label><input type="checkbox"> CNC加工 (8)</label></li>
+                <li><label><input type="checkbox"> ハンドリング (7)</label></li>
+                <li><label><input type="checkbox"> レーザー (7)</label></li>
+                <li><label><input type="checkbox"> ねじ締め (6)</label></li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>システムソフトウェア</summary>
+              <ul class="facet-list">
+                <li><label><input type="checkbox"> ランタイム</label></li>
+                <li><label><input type="checkbox"> ドライバー</label></li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>バリエーション</summary>
+              <ul class="facet-list">
+                <li><label><input type="checkbox"> Basic</label></li>
+                <li><label><input type="checkbox"> Advanced</label></li>
+              </ul>
+            </details>
+          </aside>
+
+          <!-- 中央：商品グリッド -->
+          <section class="catalog__main">
+            <div id="kawasakiGrid" class="catalog__grid" aria-live="polite" aria-label="カワサキ ソフトウェア一覧"></div>
+          </section>
+
+          <!-- 右：プロモパネル -->
+          <aside class="catalog__sidepanel">
+            <div class="promo-card">
+              <h3>Kawasaki 製品推薦アシスタント</h3>
+              <p>用途検討のためのAIアシスタント。要件に最適な構成やシミュレーションを提案します。</p>
+              <button class="btn btn--primary">AIアシスタントに相談</button>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
