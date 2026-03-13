@@ -1,13 +1,13 @@
 // ====== ダミーデータ（マーケットプレイス用） ======
 const apps = [
-  { id: "app1", name: "Kawasaki Software", vendor: "Kawasaki", desc: "Kawasakiソフトマーケットプレイス", icon: "app1.png", badge: "公式" },
-  { id: "app2", name: "Nav2Grid", vendor: "Navigation", desc: "倉庫向けナビゲーションプラグイン", icon: "app2.png", badge: "人気" },
-  { id: "app3", name: "Workspace Sync", vendor: "Workspace", desc: "作業スペースの設定を自動同期", icon: "app2.png", badge: "新着" },
-  { id: "app4", name: "Telemetry Sense", vendor: "Insight", desc: "運用データの可視化と異常検知", icon: "app2.png" },
-  { id: "app5", name: "Vision Studio", vendor: "Vision", desc: "カメラ×AIの検査テンプレート", icon: "app2.png" },
-  { id: "app6", name: "SysDiag Core", vendor: "System", desc: "システム診断とログ収集を一元化", icon: "app2.png" },
-  { id: "app7", name: "Package Builder", vendor: "DevTools", desc: "配布パッケージの作成を自動化", icon: "app2.png" },
-  { id: "app8", name: "Routing Assist", vendor: "Optimizer", desc: "ルート計画の最適化エンジン", icon: "app2.png" },
+  { id: "app1", name: "Kawasaki Software", vendor: "Kawasaki", desc: "Kawasakiソフトマーケットプレイス", icon: "assets/app1.png", badge: "公式", link: "kawasaki.html"},
+  { id: "app2", name: "Nav2Grid", vendor: "Navigation", desc: "倉庫向けナビゲーションプラグイン", icon: "assets/app2.png", badge: "人気" },
+  { id: "app3", name: "Workspace Sync", vendor: "Workspace", desc: "作業スペースの設定を自動同期", icon: "assets/app2.png", badge: "新着" },
+  { id: "app4", name: "Telemetry Sense", vendor: "Insight", desc: "運用データの可視化と異常検知", icon: "assets/app2.png" },
+  { id: "app5", name: "Vision Studio", vendor: "Vision", desc: "カメラ×AIの検査テンプレート", icon: "assets/app2.png" },
+  { id: "app6", name: "SysDiag Core", vendor: "System", desc: "システム診断とログ収集を一元化", icon: "assets/app2.png" },
+  { id: "app7", name: "Package Builder", vendor: "DevTools", desc: "配布パッケージの作成を自動化", icon: "assets/app2.png" },
+  { id: "app8", name: "Routing Assist", vendor: "Optimizer", desc: "ルート計画の最適化エンジン", icon: "assets/app2.png" },
 ];
 
 // ====== 共通要素 ======
@@ -161,5 +161,94 @@ sidebarToggle?.addEventListener("click", () => {
   ctx.font = '12px system-ui, sans-serif';
   // （キャンバス外にテキストは出しているのでここでは省略可）
 })();
+
+function createCard(a) {
+  const el = document.createElement("article");
+  el.className = "card";
+  el.innerHTML = `
+    <div class="card__icon" aria-hidden="true">
+      ${a.icon ? `<img src="${a.icon}" alt="${a.name} のアイコン">` : ""}
+    </div>
+    <div class="card__body">
+      <h3 class="card__title">${a.name}${a.badge ? `<span class="card__badge">${a.badge}</span>` : ""}</h3>
+      <p class="card__meta">${a.vendor} ・ ${a.desc}</p>
+    </div>
+  `;
+  // ★リンクがあれば遷移、なければ従来のアラート
+  el.addEventListener("click", () => {
+    if (a.link) { location.href = a.link; }
+    else { alert(`${a.name} を開きます（デモ）`); }
+  });
+  el.style.cursor = "pointer";
+  return el;
+}
+
+/* ===== カワサキ：商品グリッド描画 ===== */
+(function kawasakiCatalog() {
+  const grid = document.getElementById('kawasakiGrid');
+  if (!grid) return; // 他ページでは実行しない
+
+  // ダミー商品（必要に応じて増やしてください）
+  let items = [
+    { id: 'arct-basic-50', name: '多軸盤制御', dept: 'アーク溶接', code: '423318', license: 'Node Locked (0)', note: 'ライセンスは有効期限内ではありません。', icon: 'assets/arct.png' },
+    { id: 'arct-basic-51', name: 'ハンドリング協調', dept: 'アーク溶接', code: '694152', license: 'Node Locked (0)', note: 'ライセンスは有効期限内ではありません。', icon: 'assets/arct.png' },
+    { id: 'arct-adv-50',  name: 'マルチコントローラ', dept: 'アーク溶接', code: '423318', license: 'Node Locked (0)', note: 'ライセンスは有効期限内ではありません。', icon: 'assets/arct.png' },
+    { id: 'arct-adv-51',  name: '通信協調', dept: 'アーク溶接', code: '694152', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
+    // もう少しダミーを重複で増やして見栄えを揃える
+    { id: 'arct-basic-52', name: 'ポジショナー', dept: 'アーク溶接', code: '734512', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
+    { id: 'arct-adv-52',   name: '溶接条件設定', dept: 'アーク溶接', code: '734513', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
+    { id: 'arct-basic-53', name: 'CAMティーチング', dept: 'アーク溶接', code: '812345', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
+    { id: 'arct-adv-53',   name: '外部軸追加', dept: 'ハンドリング', code: '812346', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
+    { id: 'arct-basic-54', name: 'ソフトPLC', dept: 'ハンドリング', code: '912340', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
+    { id: 'arct-adv-54',   name: 'C＃プログラミング', dept: 'ハンドリング', code: '912341', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
+    { id: 'arct-basic-55', name: 'pythonプログラミング', dept: 'ハンドリング', code: '992200', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
+    { id: 'arct-adv-55',   name: 'AS言語変換', dept: 'ハンドリング', code: '992201', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' }
+  ];
+
+  const itemTotalEl = document.getElementById('itemTotal');
+  const itemRangeEl = document.getElementById('itemRange');
+  itemTotalEl && (itemTotalEl.textContent = '84'); // ダミー総数
+
+  function cardTemplate(p) {
+    const el = document.createElement('article');
+    el.className = 'catalog-card';
+    el.innerHTML = `
+      <div class="catalog-card__icon">
+        <img src="${p.icon}" alt="${p.name} アイコン">
+      </div>
+      <h3 class="catalog-card__title">${p.name}</h3>
+      <p class="catalog-card__meta">部門：${p.dept} &nbsp;|&nbsp; 配信番号：${p.code}</p>
+      <p class="catalog-card__meta">${p.license}</p>
+      ${p.note && p.note !== '—' ? `<p class="catalog-card__meta">${p.note}</p>` : ``}
+    `;
+    // クリック時の挙動（詳細ページに進む想定：今はダイアログ）
+    el.addEventListener('click', () => alert(`${p.name} の詳細ページ（今はダミー）`));
+    return el;
+  }
+
+  function render(list) {
+    grid.innerHTML = '';
+    const frag = document.createDocumentFragment();
+    list.forEach(item => frag.appendChild(cardTemplate(item)));
+    grid.appendChild(frag);
+    // 件数表示（1–◯ / 84）
+    itemRangeEl && (itemRangeEl.textContent = `1–${list.length}`);
+  }
+  render(items);
+
+  // 並べ替え
+  const sortSelect = document.getElementById('sortSelect');
+  sortSelect?.addEventListener('change', (e) => {
+    const v = e.target.value;
+    let sorted = [...items];
+    if (v === 'name-asc') {
+      sorted.sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+    } else if (v === 'name-desc') {
+      sorted.sort((a, b) => b.name.localeCompare(a.name, 'ja'));
+    } // Standard は元順
+    render(sorted);
+  });
+})();
+``
 
 ``
