@@ -1,13 +1,13 @@
 // ====== ダミーデータ（マーケットプレイス用） ======
 const apps = [
-  { id: "app1", name: "Kawasaki Software", vendor: "Kawasaki", desc: "Kawasakiソフトマーケットプレイス", icon: "assets/app1.png", badge: "公式", link: "kawasaki.html"},
-  { id: "app2", name: "Nav2Grid", vendor: "Navigation", desc: "倉庫向けナビゲーションプラグイン", icon: "assets/app2.png", badge: "人気" },
-  { id: "app3", name: "Workspace Sync", vendor: "Workspace", desc: "作業スペースの設定を自動同期", icon: "assets/app2.png", badge: "新着" },
-  { id: "app4", name: "Telemetry Sense", vendor: "Insight", desc: "運用データの可視化と異常検知", icon: "assets/app2.png" },
-  { id: "app5", name: "Vision Studio", vendor: "Vision", desc: "カメラ×AIの検査テンプレート", icon: "assets/app2.png" },
-  { id: "app6", name: "SysDiag Core", vendor: "System", desc: "システム診断とログ収集を一元化", icon: "assets/app2.png" },
-  { id: "app7", name: "Package Builder", vendor: "DevTools", desc: "配布パッケージの作成を自動化", icon: "assets/app2.png" },
-  { id: "app8", name: "Routing Assist", vendor: "Optimizer", desc: "ルート計画の最適化エンジン", icon: "assets/app2.png" },
+  { id: "app1", name: "Kawasaki Software", vendor: "Kawasaki", desc: "Kawasakiソフトマーケットプレイス", icon: "app1.png", badge: "公式", link: "kawasaki.html"},
+  { id: "app2", name: "Nav2Grid", vendor: "Navigation", desc: "倉庫向けナビゲーションプラグイン", icon: "app2.png", badge: "人気" },
+  { id: "app3", name: "Workspace Sync", vendor: "Workspace", desc: "作業スペースの設定を自動同期", icon: "app2.png", badge: "新着" },
+  { id: "app4", name: "Telemetry Sense", vendor: "Insight", desc: "運用データの可視化と異常検知", icon: "app2.png" },
+  { id: "app5", name: "Vision Studio", vendor: "Vision", desc: "カメラ×AIの検査テンプレート", icon: "app2.png" },
+  { id: "app6", name: "SysDiag Core", vendor: "System", desc: "システム診断とログ収集を一元化", icon: "app2.png" },
+  { id: "app7", name: "Package Builder", vendor: "DevTools", desc: "配布パッケージの作成を自動化", icon: "app2.png" },
+  { id: "app8", name: "Routing Assist", vendor: "Optimizer", desc: "ルート計画の最適化エンジン", icon: "app2.png" },
 ];
 
 // ====== 共通要素 ======
@@ -190,19 +190,19 @@ function createCard(a) {
 
   // ダミー商品（必要に応じて増やしてください）
   let items = [
-    { id: 'arct-basic-50', name: '多軸盤制御', dept: 'アーク溶接', code: '423318', license: 'Node Locked (0)', note: 'ライセンスは有効期限内ではありません。', icon: 'assets/arct.png' },
-    { id: 'arct-basic-51', name: 'ハンドリング協調', dept: 'アーク溶接', code: '694152', license: 'Node Locked (0)', note: 'ライセンスは有効期限内ではありません。', icon: 'assets/arct.png' },
-    { id: 'arct-adv-50',  name: 'マルチコントローラ', dept: 'アーク溶接', code: '423318', license: 'Node Locked (0)', note: 'ライセンスは有効期限内ではありません。', icon: 'assets/arct.png' },
-    { id: 'arct-adv-51',  name: '通信協調', dept: 'アーク溶接', code: '694152', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
+    { id: 'arct-basic-50', name: '多軸盤制御', dept: 'アーク溶接', code: '423318', license: 'Node Locked (0)', note: 'ライセンスは有効期限内ではありません。', icon: 'arct.png' },
+    { id: 'arct-basic-51', name: 'ハンドリング協調', dept: 'アーク溶接', code: '694152', license: 'Node Locked (0)', note: 'ライセンスは有効期限内ではありません。', icon: 'arct.png' },
+    { id: 'arct-adv-50',  name: 'マルチコントローラ', dept: 'アーク溶接', code: '423318', license: 'Node Locked (0)', note: 'ライセンスは有効期限内ではありません。', icon: 'arct.png' },
+    { id: 'arct-adv-51',  name: '通信協調', dept: 'アーク溶接', code: '694152', license: 'Node Locked (0)', note: '—', icon: 'arct.png' },
     // もう少しダミーを重複で増やして見栄えを揃える
-    { id: 'arct-basic-52', name: 'ポジショナー', dept: 'アーク溶接', code: '734512', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
-    { id: 'arct-adv-52',   name: '溶接条件設定', dept: 'アーク溶接', code: '734513', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
-    { id: 'arct-basic-53', name: 'CAMティーチング', dept: 'アーク溶接', code: '812345', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
-    { id: 'arct-adv-53',   name: '外部軸追加', dept: 'ハンドリング', code: '812346', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
-    { id: 'arct-basic-54', name: 'ソフトPLC', dept: 'ハンドリング', code: '912340', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
-    { id: 'arct-adv-54',   name: 'C＃プログラミング', dept: 'ハンドリング', code: '912341', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
-    { id: 'arct-basic-55', name: 'pythonプログラミング', dept: 'ハンドリング', code: '992200', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' },
-    { id: 'arct-adv-55',   name: 'AS言語変換', dept: 'ハンドリング', code: '992201', license: 'Node Locked (0)', note: '—', icon: 'assets/arct.png' }
+    { id: 'arct-basic-52', name: 'ポジショナー', dept: 'アーク溶接', code: '734512', license: 'Node Locked (0)', note: '—', icon: 'arct.png' },
+    { id: 'arct-adv-52',   name: '溶接条件設定', dept: 'アーク溶接', code: '734513', license: 'Node Locked (0)', note: '—', icon: 'arct.png' },
+    { id: 'arct-basic-53', name: 'CAMティーチング', dept: 'アーク溶接', code: '812345', license: 'Node Locked (0)', note: '—', icon: 'arct.png' },
+    { id: 'arct-adv-53',   name: '外部軸追加', dept: 'ハンドリング', code: '812346', license: 'Node Locked (0)', note: '—', icon: 'arct.png' },
+    { id: 'arct-basic-54', name: 'ソフトPLC', dept: 'ハンドリング', code: '912340', license: 'Node Locked (0)', note: '—', icon: 'arct.png' },
+    { id: 'arct-adv-54',   name: 'C＃プログラミング', dept: 'ハンドリング', code: '912341', license: 'Node Locked (0)', note: '—', icon: 'arct.png' },
+    { id: 'arct-basic-55', name: 'pythonプログラミング', dept: 'ハンドリング', code: '992200', license: 'Node Locked (0)', note: '—', icon: 'arct.png' },
+    { id: 'arct-adv-55',   name: 'AS言語変換', dept: 'ハンドリング', code: '992201', license: 'Node Locked (0)', note: '—', icon: 'arct.png' }
   ];
 
   const itemTotalEl = document.getElementById('itemTotal');
@@ -252,3 +252,4 @@ function createCard(a) {
 ``
 
 ``
+
