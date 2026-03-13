@@ -1,13 +1,13 @@
 // ====== ダミーデータ（マーケットプレイス用） ======
 const apps = [
-  { id: "app1", name: "Kawasaki Software", vendor: "Kawasaki", desc: "Kawasakiソフトマーケットプレイス", icon: "assets/app1.png", badge: "公式" },
-  { id: "app2", name: "Nav2Grid", vendor: "Navigation", desc: "倉庫向けナビゲーションプラグイン", icon: "assets/app2.png", badge: "人気" },
-  { id: "app3", name: "Workspace Sync", vendor: "Workspace", desc: "作業スペースの設定を自動同期", icon: "assets/app2.png", badge: "新着" },
-  { id: "app4", name: "Telemetry Sense", vendor: "Insight", desc: "運用データの可視化と異常検知", icon: "assets/app2.png" },
-  { id: "app5", name: "Vision Studio", vendor: "Vision", desc: "カメラ×AIの検査テンプレート", icon: "assets/app2.png" },
-  { id: "app6", name: "SysDiag Core", vendor: "System", desc: "システム診断とログ収集を一元化", icon: "assets/app2.png" },
-  { id: "app7", name: "Package Builder", vendor: "DevTools", desc: "配布パッケージの作成を自動化", icon: "assets/app2.png" },
-  { id: "app8", name: "Routing Assist", vendor: "Optimizer", desc: "ルート計画の最適化エンジン", icon: "assets/app2.png" },
+  { id: "app1", name: "Kawasaki Software", vendor: "Kawasaki", desc: "Kawasakiソフトマーケットプレイス", icon: "app1.png", badge: "公式" },
+  { id: "app2", name: "Nav2Grid", vendor: "Navigation", desc: "倉庫向けナビゲーションプラグイン", icon: "app2.png", badge: "人気" },
+  { id: "app3", name: "Workspace Sync", vendor: "Workspace", desc: "作業スペースの設定を自動同期", icon: "app2.png", badge: "新着" },
+  { id: "app4", name: "Telemetry Sense", vendor: "Insight", desc: "運用データの可視化と異常検知", icon: "app2.png" },
+  { id: "app5", name: "Vision Studio", vendor: "Vision", desc: "カメラ×AIの検査テンプレート", icon: "app2.png" },
+  { id: "app6", name: "SysDiag Core", vendor: "System", desc: "システム診断とログ収集を一元化", icon: "app2.png" },
+  { id: "app7", name: "Package Builder", vendor: "DevTools", desc: "配布パッケージの作成を自動化", icon: "app2.png" },
+  { id: "app8", name: "Routing Assist", vendor: "Optimizer", desc: "ルート計画の最適化エンジン", icon: "app2.png" },
 ];
 
 // ====== 共通要素 ======
@@ -161,4 +161,5 @@ sidebarToggle?.addEventListener("click", () => {
   ctx.font = '12px system-ui, sans-serif';
   // （キャンバス外にテキストは出しているのでここでは省略可）
 })();
+
 ``
