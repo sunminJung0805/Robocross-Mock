@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ホーム | ROBOCROSS</title>
+<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="app">
+
+  <!-- ===== 左サイドバー ===== -->
+  <aside class="sidebar" id="sidebar">
+  <div class="sidebar__top"><img src="assets/logo.png">
+  </div>
+
+  <nav class="nav">
+    <ul>
+
+      <li>
+        <a class="nav__link is-active" href="home.html">	<i class="fas fa-home"></i> ホーム</a>
+      </li>
+      <li>
+        <a class="nav__link" href="marketplace.html"><i class="fas fa-shopping-cart"></i> マーケットプレイス</a>
+      </li>
+		     <li>
+        <a class="nav__link" href="apps.html"><i class="fas fa-icons"></i> アプリケーション</a>
+      </li>
+      <li class="nav__section">コンテナ</li>
+      <li>
+        <a class="nav__link" href="container.html"><i class="fas fa-photo-video"></i> イメージ</a>
+      </li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-folder-open"></i> [準備中]パッケージ</a>
+      </li>
+
+      <li class="nav__section">デバイス管理</li>
+      <li>
+        <a class="nav__link" >	<i class="fas fa-robot"></i> デバイスグループ</a>
+      </li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-wifi"></i> [準備中]IoT接続</a>
+      </li>
+		      <li>
+        <a class="nav__link" ><i class="fas fa-server"></i> [準備中]VPN接続</a>
+      </li>
+		      <li>
+        <a class="nav__link" >	<i class="fas fa-certificate"></i> 証明書</a>
+      </li>
+
+      <li class="nav__section">ストレージ</li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-share-alt"></i> 共有ストレージ</a>
+      </li>
+		      <li>
+        <a class="nav__link" ><i class="fas fa-share-alt"></i> ユーザーストレージ</a>
+      </li>
+		
+		   <li class="nav__section">アカウント管理</li>
+      <li>
+        <a class="nav__link"><i class="fas fa-user-circle"></i> アカウント</a>
+      </li>
+		      <li>
+        <a class="nav__link"><i class="fas fa-user-friends"></i> アカウントグループ</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+  <!-- ===== 右側コンテンツ ===== -->
+  <div class="content">
+
+    <!-- 上部バー -->
+    <header class="topbar">
+	<div class="breadcrumbs"> </div>
+
+     <div class="topbar__actions">
+  <div class="user-menu">
+    <div class="avatar" id="userAvatar">TU</div>
+
+    <!-- ポップアップ -->
+    <div class="user-dropdown" id="userDropdown">
+      <button id="logoutBtn">ログアウト</button>
+    </div>
+  </div>
+
+  <span class="username">Test User</span>
+</div>
+    </header>
+
+    <!-- メイン -->
+    <main class="main">
+	<div class="breadcrumbs">
+        <span aria-current="page">ホーム</span>
+      </div>
+
+      <h1 class="home-title">クイックスタート</h1>
+
+      <h2 class="home-subtitle">準備（管理者向け）</h2>
+
+      <!-- 管理者向けカード -->
+      <section class="home-grid">
+        <div class="home-card">
+          <div class="home-icon">➕</div>
+          <p>アカウントを追加してみましょう</p>
+        </div>
+
+        <div class="home-card">
+          <div class="home-icon">📶</div>
+          <p>デバイスを設置してみましょう</p>
+        </div>
+
+        <div class="home-card">
+          <div class="home-icon">⬇️</div>
+          <p>アプリケーションを契約してみましょう</p>
+        </div>
+      </section>
+
+      <h2 class="home-subtitle">サービス利用（一般ユーザー向け）</h2>
+
+      <!-- 一般ユーザー向けカード -->
+      <section class="home-grid">
+        <div class="home-card">
+          <div class="home-icon">📊</div>
+          <p>現場のデータを可視化してみましょう</p>
+        </div>
+
+        <div class="home-card">
+          <div class="home-icon">🔌</div>
+          <p>現場のシステムに遠隔接続してみましょう</p>
+        </div>
+
+        <div class="home-card">
+          <div class="home-icon">❓</div>
+          <p>お困りのときは</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

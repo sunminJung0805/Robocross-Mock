@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>コンテナ | ROBOCROSS</title>
+<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="app">
+
+  <!-- ===== 左サイドバー ===== -->
+  <aside class="sidebar" id="sidebar">
+  <div class="sidebar__top"><img src="assets/logo.png">
+  </div>
+
+  <nav class="nav">
+    <ul>
+
+      <li>
+        <a class="nav__link" href="home.html">	<i class="fas fa-home"></i> ホーム</a>
+      </li>
+      <li>
+        <a class="nav__link" href="marketplace.html"><i class="fas fa-shopping-cart"></i> マーケットプレイス</a>
+      </li>
+		     <li>
+        <a class="nav__link" href="apps.html"><i class="fas fa-icons"></i> アプリケーション</a>
+      </li>
+
+      <li class="nav__section">コンテナ</li>
+      <li>
+        <a class="nav__link is-active" href="container.html"><i class="fas fa-photo-video"></i> イメージ</a>
+      </li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-folder-open"></i> [準備中]パッケージ</a>
+      </li>
+
+      <li class="nav__section">デバイス管理</li>
+      <li>
+        <a class="nav__link" >	<i class="fas fa-robot"></i> デバイスグループ</a>
+      </li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-wifi"></i> [準備中]IoT接続</a>
+      </li>
+		      <li>
+        <a class="nav__link" ><i class="fas fa-server"></i> [準備中]VPN接続</a>
+      </li>
+		      <li>
+        <a class="nav__link" >	<i class="fas fa-certificate"></i> 証明書</a>
+      </li>
+
+      <li class="nav__section">ストレージ</li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-share-alt"></i> 共有ストレージ</a>
+      </li>
+		      <li>
+        <a class="nav__link" ><i class="fas fa-share-alt"></i> ユーザーストレージ</a>
+      </li>
+		
+		   <li class="nav__section">アカウント管理</li>
+      <li>
+        <a class="nav__link"><i class="fas fa-user-circle"></i> アカウント</a>
+      </li>
+		      <li>
+        <a class="nav__link"><i class="fas fa-user-friends"></i> アカウントグループ</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+  <!-- ===== 右側コンテンツ ===== -->
+  <div class="content">
+
+    <!-- 上部バー -->
+    <header class="topbar">
+	<div class="breadcrumbs"> </div>
+
+      <div class="topbar__actions">
+        <div class="avatar">TU</div>
+        <span class="username">Test User</span>
+      </div>
+    </header>
+
+    <!-- メイン -->
+  <main class="main">
+
+  <!-- ===== タイトル & ツールバー ===== -->
+  <div class="page-header">
+    <h1 class="page-title">コンテナイメージ一覧</h1>
+
+    <div class="page-actions">
+      <button class="icon-btn" title="更新">🔄</button>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <span class="search-icon">🔍</span>
+      </div>
+
+      <button class="icon-btn" title="フィルター">☰</button>
+    </div>
+  </div>
+
+  <!-- ===== テーブル ===== -->
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>イメージ名</th>
+          <th>タグ</th>
+          <th>状態</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="image-cell">
+            <span class="image-icon">⬢</span>
+            <a href="#" class="image-link">khi/empci (Empty Container Image)</a>
+          </td>
+          <td>1.0.0</td>
+          <td>
+            <span class="status status--active">● 有効</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="image-cell">
+            <span class="image-icon">⬢</span>
+            <a href="#" class="image-link">khi/nginx (Nginx)</a>
+          </td>
+          <td>1.29.5</td>
+          <td>
+            <span class="status status--active">● 有効</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="image-cell">
+            <span class="image-icon">⬢</span>
+            <a href="#" class="image-link">khi/softupdg (Controller Software Updater)</a>
+          </td>
+          <td>1.0.0</td>
+          <td>
+            <span class="status status--active">● 有効</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== フッター（ページネーション） ===== -->
+  <div class="table-footer">
+    <div class="rows-per-page">
+      ページあたりの行数:
+      <select>
+        <option>25</option>
+      </select>
+    </div>
+
+    <div class="table-range">
+      1–3 of 3
+      <button class="icon-btn">‹</button>
+      <button class="icon-btn">›</button>
+    </div>
+  </div>
+
+</main>
+  </div>
+
+</body>
+</html>

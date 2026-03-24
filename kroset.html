@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>アプリケーション | ROBOCROSS</title>
+<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="app">
+
+  <!-- ===== 左サイドバー ===== -->
+  <aside class="sidebar" id="sidebar">
+  <div class="sidebar__top"><img src="assets/logo.png">
+  </div>
+
+  <nav class="nav">
+    <ul>
+
+      <li>
+        <a class="nav__link" href="home.html">	<i class="fas fa-home"></i> ホーム</a>
+      </li>
+      <li>
+        <a class="nav__link" href="marketplace.html"><i class="fas fa-shopping-cart"></i> マーケットプレイス</a>
+      </li>
+		     <li>
+        <a class="nav__link is-active" href="apps.html"><i class="fas fa-icons"></i> アプリケーション</a>
+      </li>
+
+      <li class="nav__section">コンテナ</li>
+      <li>
+        <a class="nav__link" href="container.html"><i class="fas fa-photo-video"></i> イメージ</a>
+      </li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-folder-open"></i> [準備中]パッケージ</a>
+      </li>
+
+      <li class="nav__section">デバイス管理</li>
+      <li>
+        <a class="nav__link" >	<i class="fas fa-robot"></i> デバイスグループ</a>
+      </li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-wifi"></i> [準備中]IoT接続</a>
+      </li>
+		      <li>
+        <a class="nav__link" ><i class="fas fa-server"></i> [準備中]VPN接続</a>
+      </li>
+		      <li>
+        <a class="nav__link" >	<i class="fas fa-certificate"></i> 証明書</a>
+      </li>
+
+      <li class="nav__section">ストレージ</li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-share-alt"></i> 共有ストレージ</a>
+      </li>
+		      <li>
+        <a class="nav__link" ><i class="fas fa-share-alt"></i> ユーザーストレージ</a>
+      </li>
+		
+		   <li class="nav__section">アカウント管理</li>
+      <li>
+        <a class="nav__link"><i class="fas fa-user-circle"></i> アカウント</a>
+      </li>
+		      <li>
+        <a class="nav__link"><i class="fas fa-user-friends"></i> アカウントグループ</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+  <!-- ===== 右側コンテンツ ===== -->
+  <div class="content">
+
+    <!-- 上部バー -->
+    <header class="topbar">
+	<div class="breadcrumbs"> </div>
+
+      <div class="topbar__actions">
+  <div class="user-menu">
+    <div class="avatar" id="userAvatar">TU</div>
+
+    <!-- ポップアップ -->
+    <div class="user-dropdown" id="userDropdown">
+      <button id="logoutBtn">ログアウト</button>
+    </div>
+  </div>
+
+  <span class="username">Test User</span>
+</div>
+    </header>
+
+    <!-- メイン -->
+ <main class="main">
+
+  <!-- ===== パンくず ===== -->
+  <div class="breadcrumbs"><a href="home.html">ホーム</a>
+    <span class="sep">/</span>
+    <a href="application-list.html">アプリケーション一覧</a>
+    <span class="sep">/</span>
+    <span>k-roset-test</span>
+  </div>
+
+  <!-- ===== タイトル & 更新 ===== -->
+  <div class="page-header">
+    <h1 class="page-title">アプリケーション情報</h1>
+    <button class="icon-btn" title="更新">↻</button>
+  </div>
+
+  <!-- ===== アプリ名 ===== -->
+  <div class="app-header">
+    <div class="app-logo"><i class="fab fa-kickstarter-k"></i></div>
+    <div class="app-name">k-roset test</div>
+  </div>
+
+  <!-- ===== タブ ===== -->
+  <div class="tabs">
+    <button class="tab is-active">情報</button>
+    <button class="tab">プロパティ</button>
+    <button class="tab">ファイアウォール</button>
+    <button class="tab">ルートテーブル</button>
+    <button class="tab">セッション</button>
+  </div>
+
+  <!-- ===== 情報テーブル ===== -->
+  <div class="detail-card">
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th>状態</th>
+          <td><span class="status status--active">● 有効</span></td>
+        </tr>
+        <tr>
+          <th>実行中の操作</th>
+          <td>なし</td>
+        </tr>
+        <tr>
+          <th>アプリケーションID</th>
+          <td>ea191fd1-cce9-4fa7-b8da-d03e554edf7b</td>
+        </tr>
+        <tr>
+          <th>アプリケーションシリアル</th>
+          <td>iqvu00lk</td>
+        </tr>
+        <tr>
+          <th>サービス名</th>
+          <td>
+            K-ROSET VM (1.0.0)
+          </td>
+        </tr>
+        <tr>
+          <th>サービスID</th>
+          <td>f7a83c21-9d4e-41b8-a562-3e8f19c0d7b5</td>
+        </tr>
+        <tr>
+          <th>IPアドレス範囲</th>
+          <td>10.14.42.0/24</td>
+        </tr>
+        <tr>
+          <th>接続URL</th>
+          <td>
+            https://client.wvd.microsoft.com/arm/webclient/
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+``
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

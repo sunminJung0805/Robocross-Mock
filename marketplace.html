@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>マーケットプレイス | ROBOCROSS</title>
+<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="app">
+
+  <!-- ===== 左サイドバー ===== -->
+  <aside class="sidebar" id="sidebar">
+  <div class="sidebar__top"><img src="assets/logo.png">
+  </div>
+
+  <nav class="nav">
+    <ul>
+
+      <li>
+        <a class="nav__link" href="home.html">	<i class="fas fa-home"></i> ホーム</a>
+      </li>
+      <li>
+        <a class="nav__link is-active" href="marketplace.html"><i class="fas fa-shopping-cart"></i> マーケットプレイス</a>
+      </li>
+		     <li>
+        <a class="nav__link" href="apps.html"><i class="fas fa-icons"></i> アプリケーション</a>
+      </li>
+
+      <li class="nav__section">コンテナ</li>
+      <li>
+        <a class="nav__link" href="container.html"><i class="fas fa-photo-video"></i> イメージ</a>
+      </li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-folder-open"></i> [準備中]パッケージ</a>
+      </li>
+
+      <li class="nav__section">デバイス管理</li>
+      <li>
+        <a class="nav__link" >	<i class="fas fa-robot"></i> デバイスグループ</a>
+      </li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-wifi"></i> [準備中]IoT接続</a>
+      </li>
+		      <li>
+        <a class="nav__link" ><i class="fas fa-server"></i> [準備中]VPN接続</a>
+      </li>
+		      <li>
+        <a class="nav__link" >	<i class="fas fa-certificate"></i> 証明書</a>
+      </li>
+
+      <li class="nav__section">ストレージ</li>
+      <li>
+        <a class="nav__link" ><i class="fas fa-share-alt"></i> 共有ストレージ</a>
+      </li>
+		      <li>
+        <a class="nav__link" ><i class="fas fa-share-alt"></i> ユーザーストレージ</a>
+      </li>
+		
+		   <li class="nav__section">アカウント管理</li>
+      <li>
+        <a class="nav__link"><i class="fas fa-user-circle"></i> アカウント</a>
+      </li>
+		      <li>
+        <a class="nav__link"><i class="fas fa-user-friends"></i> アカウントグループ</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+  <!-- ===== 右側コンテンツ ===== -->
+  <div class="content">
+
+    <!-- 上部バー -->
+    <header class="topbar">
+	<div class="breadcrumbs"> </div>
+
+<div class="topbar__actions">
+  <div class="user-menu">
+    <div class="avatar" id="userAvatar">TU</div>
+
+    <!-- ポップアップ -->
+    <div class="user-dropdown" id="userDropdown">
+      <button id="logoutBtn">ログアウト</button>
+    </div>
+  </div>
+
+  <span class="username">Test User</span>
+</div>
+    </header>
+
+    <!-- メイン -->
+ <main class="main">
+
+  <!-- ===== パンくず ===== -->
+  <div class="breadcrumbs">
+    <span>マーケットプレイス</span>
+  </div>
+
+  <!-- ===== タイトル & 更新 ===== -->
+  <div class="page-header">
+    <h1 class="page-title">マーケットプレイス</h1>
+    <button class="icon-btn" title="更新">↻</button>
+  </div>
+
+  <!-- ===== 検索エリア ===== -->
+  <div class="market-search">
+    <input type="text" placeholder="検索テキスト" />
+
+    <button class="btn-search">検索</button>
+
+    <select class="search-filter">
+      <option>検索条件 サービス種別:すべて [準備中] カテゴリ:すべて [準備中] ユーザー順:関連度</option>
+    </select>
+  </div>
+
+  <!-- ===== カードグリッド ===== -->
+  <div class="market-grid">
+<a class="neolink" href="neo.html">
+    <article class="market-card">
+      <div class="market-icon"><img src="assets/neologo.png"></div>
+      <h3>neoROSET</h3>
+      <p class="market-vendor">川崎重工業株式会社</p>
+      <p class="market-desc">AZGrafanaアプリの概要</p>
+    </article></a>
+
+    <article class="market-card">
+      <div class="market-icon">🔑</div>
+      <h3>LicenseManager App</h3>
+      <p class="market-vendor">川崎重工業株式会社</p>
+      <p class="market-desc">ライセンス管理アプリの概要</p>
+    </article>
+
+    <article class="market-card">
+      <div class="market-icon">⬢</div>
+      <h3>Empty Container Image</h3>
+      <p class="market-vendor">川崎重工業株式会社</p>
+      <p class="market-desc">Emptyコンテナイメージ</p>
+    </article>
+
+    <article class="market-card">
+      <div class="market-icon">🐱</div>
+      <h3>Tomcat Container Image</h3>
+      <p class="market-vendor">川崎重工業株式会社</p>
+      <p class="market-desc">Apache Tomcat 10 コンテナイメージ</p>
+    </article>
+
+    <article class="market-card">
+      <div class="market-icon">📈</div>
+      <h3>IoT Data View on ROBOCROSS</h3>
+      <p class="market-vendor">川崎重工業株式会社</p>
+      <p class="market-desc">IoTデータ可視化アプリ</p>
+    </article>
+
+    <article class="market-card">
+      <div class="market-icon">🤖</div>
+      <h3>Nyokkey Core</h3>
+      <p class="market-vendor">川崎重工業株式会社</p>
+      <p class="market-desc">ロボット制御コア</p>
+    </article>
+
+    <article class="market-card">
+      <div class="market-icon">🟢</div>
+      <h3>Nginx</h3>
+      <p class="market-vendor">川崎重工業株式会社</p>
+      <p class="market-desc">Nginx Web サーバ</p>
+    </article>
+
+    <article class="market-card">
+      <div class="market-icon">🔄</div>
+      <h3>Controller Software Updater</h3>
+      <p class="market-vendor">川崎重工業株式会社</p>
+      <p class="market-desc">コントローラ更新ツール</p>
+    </article>
+
+  </div>
+
+</main>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

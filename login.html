@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ログイン</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+
+  <div class="login-box">
+    <h2>ログイン</h2>
+
+    <label>ID</label>
+    <input type="text" id="loginId" placeholder="IDを入力">
+
+    <label>パスワード</label>
+    <input type="password" id="loginPw" placeholder="パスワードを入力">
+
+    <button class="login-btn" onclick="doLogin()">ログイン</button>
+    <p id="loginError" class="login-error"></p>
+  </div>
+
+<script>
+function doLogin() {
+  const id = document.getElementById("loginId").value;
+  const pw = document.getElementById("loginPw").value;
+
+  if (id === "khi" && pw === "khi") {
+    location.href = "home.html";
+  } else {
+    document.getElementById("loginError").innerText =
+      "ID または パスワードが違います";
+  }
+}
+</script>
+
+</body>
+</html>
